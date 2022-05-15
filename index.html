@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.7/fullpage.css"
+      integrity="sha512-g+xyrYTXR0jF5EZGiQUMisX9Rv9RfTnbaOKe9AJsjBVBMG9bk6aYXqYujStYTKPTDEcVo+6eLziI7Hr4GV1C1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.7/fullpage.min.js"
+      integrity="sha512-MLy5YE5Hiyow/qhqZAsO91PjjWUBngedTSWTdvSbEPjFienlVY6SJ8Uy7eLHkudkv3kTJ7NFHZ9s0JD/UwpHdA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- <script type="text/javascript">
+      src = "script.js";
+    </script> -->
+
+    <title>David Thweatt</title>
+  </head>
+  <body>
+    <ul id="myMenu">
+      <li data-menuanchor="firstPage" class="active">
+        <a href="#firstPage">About</a>
+      </li>
+      <li data-menuanchor="secondPage">
+        <a href="#secondPage">Skills</a>
+      </li>
+      <li data-menuanchor="thirdPage">
+        <a href="#thirdPage">Projects</a>
+      </li>
+      <li data-menuanchor="fourthPage">
+        <a href="#fourthPage">Contact</a>
+      </li>
+    </ul>
+    <div id="fullpage">
+      <div class="section">About me</div>
+      <div class="section">Skills</div>
+      <div class="section">
+        <div class="slide">Project 1</div>
+        <div class="slide">Project 2</div>
+        <div class="slide">Project 3</div>
+      </div>
+      <div class="section">Contact</div>
+    </div>
+    <script>
+      new fullpage("#fullpage", {
+        licenseKey: "VBKMJ-MME16-1IUTI-M467H-AQBYM",
+        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage"],
+        menu: "#myMenu",
+        autoScrolling: true,
+        scrollingSpeed: 700,
+        sectionsColor: ["#ccc", "#fff", "#ccc", "#fff"],
+        navigation: true,
+      });
+    </script>
+  </body>
+</html>
