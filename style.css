@@ -6,4 +6,20 @@
 .slide {
   display: flex;
   align-items: center;
+}
+
+ul {
+  text-align: center !important;
+}
+
+.fp-controlArrow {
+  top: 99% !important;
+}
+
+.arrow-left {
+  margin-left: 30%;
+}
+
+.arrow-right {
+  margin-right: 30%;
 }/*# sourceMappingURL=style.css.map */

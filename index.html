@@ -25,7 +25,7 @@
     <title>David Thweatt</title>
   </head>
   <body>
-    <ul id="myMenu">
+    <!-- <ul id="myMenu">
       <li data-menuanchor="firstPage" class="active">
         <a href="#firstPage">About</a>
       </li>
@@ -38,7 +38,7 @@
       <li data-menuanchor="fourthPage">
         <a href="#fourthPage">Contact</a>
       </li>
-    </ul>
+    </ul> -->
     <div id="fullpage">
       <div class="section">About me</div>
       <div class="section">Skills</div>
@@ -52,12 +52,21 @@
     <script>
       new fullpage("#fullpage", {
         licenseKey: "VBKMJ-MME16-1IUTI-M467H-AQBYM",
-        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage"],
-        menu: "#myMenu",
+        // anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage"],
+        // menu: "#myMenu",
         autoScrolling: true,
-        scrollingSpeed: 700,
-        sectionsColor: ["#ccc", "#fff", "#ccc", "#fff"],
+        scrollingSpeed: 1000,
+        sectionsColor: ["#ccc", "gray", "#ccc", "gray"],
         navigation: true,
+        navigationTooltips: ["About", "Skills", "Projects", "Contact"],
+        controlArrows: true,
+        controlArrowsHTML: [
+          '<div class="arrow-left"><img src="images/arrow-left.svg" /></div>',
+          '<div class="arrow-right"><img src="images/arrow-right.svg" /></div>',
+        ],
+        slidesNavigation: true,
+        continuousVertical: true,
+        continuousHorizontal: true,
       });
     </script>
   </body>
