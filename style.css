@@ -12,7 +12,78 @@
   background-size: cover !important;
 }
 .s1 h1 {
-  color: white;
+  color: #f4f9f4;
+}
+
+.s2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.s2 .skill_info {
+  height: 20em;
+  width: 20em;
+  background-color: #616161;
+  border-radius: 1em;
+}
+.s2 .skill_info h1 {
+  color: #f4f9f4;
+  padding: 0.5em 1em 0 1em;
+  margin: 0;
+}
+.s2 .skill_info p {
+  color: #f4f9f4;
+  padding: 1em;
+  margin: 0;
+}
+.s2 .skill_logos {
+  height: 30em;
+  width: 30em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.s2 .skill_logos i {
+  font-size: 5rem;
+  padding: 0.5em;
+  color: #f4f9f4;
+}
+
+.s3 {
+  background-image: url("./images/project-wall-sand.jpeg") !important;
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+}
+.s3 .arrow-left {
+  margin-left: 5%;
+}
+.s3 .arrow-right {
+  margin-right: 5%;
+}
+.s3 .fp-slides {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.s3 .slide1_main {
+  height: 60%;
+  width: 60%;
+  background-color: #616161;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.s3 .slide1_main .slide1_info {
+  padding: 1em;
+  height: 200px;
+  width: 200px;
+}
+.s3 .slide1_main .slide1_project {
+  padding: 1em;
+  height: 400px;
+  width: 250px;
+  background-color: whitesmoke;
 }
 
 span {
@@ -34,12 +105,4 @@ h2 {
 
 ul {
   text-align: center !important;
-}
-
-.arrow-left {
-  margin-left: 10%;
-}
-
-.arrow-right {
-  margin-right: 10%;
 }/*# sourceMappingURL=style.css.map */

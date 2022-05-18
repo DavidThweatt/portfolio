@@ -12,7 +12,88 @@
   background-size: cover !important;
 
   h1 {
-    color: white;
+    color: #f4f9f4;
+  }
+}
+
+.s2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .skill_info {
+    height: 20em;
+    width: 20em;
+    background-color: #616161;
+    border-radius: 1em;
+
+    h1 {
+      color: #f4f9f4;
+      padding: 0.5em 1em 0 1em;
+      margin: 0;
+    }
+
+    p {
+      color: #f4f9f4;
+      padding: 1em;
+      margin: 0;
+    }
+  }
+
+  .skill_logos {
+    height: 30em;
+    width: 30em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    i {
+      font-size: 5rem;
+      padding: 0.5em;
+      color: #f4f9f4;
+    }
+  }
+}
+
+.s3 {
+  background-image: url("./images/project-wall-sand.jpeg") !important;
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+
+  .arrow-left {
+    margin-left: 5%;
+  }
+
+  .arrow-right {
+    margin-right: 5%;
+  }
+
+  .fp-slides {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .slide1_main {
+    height: 60%;
+    width: 60%;
+    background-color: #616161;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+    .slide1_info {
+      padding: 1em;
+      height: 200px;
+      width: 200px;
+    }
+
+    .slide1_project {
+      padding: 1em;
+      height: 400px;
+      width: 250px;
+      background-color: whitesmoke;
+    }
   }
 }
 
@@ -35,12 +116,4 @@ h2 {
 
 ul {
   text-align: center !important;
-}
-
-.arrow-left {
-  margin-left: 10%;
-}
-
-.arrow-right {
-  margin-right: 10%;
 }

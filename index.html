@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Skill Logos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- FullPage.js -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.7/fullpage.css"
@@ -24,6 +33,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- JS / CSS -->
+    <link rel="stylesheet" href="style.css" />
     <!-- <script type="text/javascript">
       src = "script.js";
     </script> -->
@@ -50,12 +62,73 @@
         <h1>About me</h1>
       </div>
       <div class="section s2">
-        <h1>Skills</h1>
+        <div class="skill_info">
+          <h1>Skills</h1>
+          <p>
+            Lorem ipsum dolor sit amet, congue accumsan reprimique pro ea, ad
+            eos tale efficiendi persequeris, pro duis deserunt corrumpit in. Mei
+            doming recusabo te, sit consul tibique inciderint et. Ad sensibus
+            expetendis sea, ei est omnesque democritum ullamcorper, duis
+            phaedrum ea vix. Erant periculis vim et, stet vocibus neglegentur id
+            per, ex sed solum ponderum.
+          </p>
+        </div>
+        <div class="skill_logos">
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-html5-plain"></i>
+          <i class="devicon-css3-plain"></i>
+          <i class="devicon-sass-original"></i>
+          <i class="devicon-react-original"></i>
+          <i class="devicon-git-plain"></i>
+          <i class="devicon-github-original"></i>
+          <i class="devicon-npm-original-wordmark"></i>
+          <i class="devicon-jest-plain"></i>
+          <i class="devicon-bulma-plain"></i>
+        </div>
       </div>
       <div class="section s3">
-        <div class="slide"><h2>Project 1</h2></div>
-        <div class="slide"><h2>Project 2</h2></div>
-        <div class="slide"><h2>Project 3</h2></div>
+        <div class="slide">
+          <div class="slide1_main">
+            <div class="slide1_info">
+              <h2>Project 1</h2>
+              <p>
+                At duo eros soleat doctus. Sit aeterno laoreet ei, mei an
+                iudicabit aliquando. Cu liber vocibus sea, no persius sapientem
+                sit. At tamquam prompta suavitate sed. Sed at iuvaret tincidunt,
+                aliquip civibus at vim.
+              </p>
+            </div>
+            <div class="slide1_project"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide1_main">
+            <div class="slide1_info">
+              <h2>Project 2</h2>
+              <p>
+                At duo eros soleat doctus. Sit aeterno laoreet ei, mei an
+                iudicabit aliquando. Cu liber vocibus sea, no persius sapientem
+                sit. At tamquam prompta suavitate sed. Sed at iuvaret tincidunt,
+                aliquip civibus at vim.
+              </p>
+            </div>
+            <div class="slide1_project"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide1_main">
+            <div class="slide1_info">
+              <h2>Project 3</h2>
+              <p>
+                At duo eros soleat doctus. Sit aeterno laoreet ei, mei an
+                iudicabit aliquando. Cu liber vocibus sea, no persius sapientem
+                sit. At tamquam prompta suavitate sed. Sed at iuvaret tincidunt,
+                aliquip civibus at vim.
+              </p>
+            </div>
+            <div class="slide1_project"></div>
+          </div>
+        </div>
       </div>
       <div class="section s4">
         <h1>Contact</h1>
@@ -66,14 +139,14 @@
         licenseKey: "VBKMJ-MME16-1IUTI-M467H-AQBYM",
         autoScrolling: true,
         scrollingSpeed: 1000,
-        sectionsColor: ["white", "gray", "#ccc", "gray"],
+        sectionsColor: ["white", "#8AAE92", "#ccc", "#C4E3CB"],
         navigation: true,
         navigationTooltips: ["About", "Skills", "Projects", "Contact"],
         showActiveTooltip: true,
         controlArrows: true,
         controlArrowsHTML: [
-          '<div class="arrow-left"><img src="images/arrow-left.svg" /></div>',
-          '<div class="arrow-right"><img src="images/arrow-right.svg" /></div>',
+          '<img src="images/arrow-left.svg" class="arrow-left" />',
+          '<img src="images/arrow-right.svg" class="arrow-right" />',
         ],
         slidesNavigation: true,
         continuousVertical: true,
