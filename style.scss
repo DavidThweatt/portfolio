@@ -12,7 +12,46 @@
   background-size: cover !important;
 
   h1 {
-    color: #f4f9f4;
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  p {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .typewriter_div {
+    width: fit-content;
+  }
+
+  .typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.12em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
   }
 }
 
@@ -22,8 +61,8 @@
   justify-content: space-around;
 
   .skill_info {
-    height: 20em;
-    width: 20em;
+    height: auto;
+    width: 40%;
     background-color: #616161;
     border-radius: 1em;
 
@@ -37,6 +76,8 @@
       color: #f4f9f4;
       padding: 1em;
       margin: 0;
+      line-height: 1.5em;
+      font-size: 1.2rem;
     }
   }
 
@@ -46,6 +87,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     i {
       font-size: 5rem;
       padding: 0.5em;

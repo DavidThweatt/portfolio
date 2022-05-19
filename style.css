@@ -12,7 +12,60 @@
   background-size: cover !important;
 }
 .s1 h1 {
-  color: #f4f9f4;
+  color: white;
+  font-size: 4rem;
+  font-weight: 800;
+}
+.s1 p {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.s1 .typewriter_div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.s1 .typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.12em;
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
 .s2 {
@@ -21,8 +74,8 @@
   justify-content: space-around;
 }
 .s2 .skill_info {
-  height: 20em;
-  width: 20em;
+  height: auto;
+  width: 40%;
   background-color: #616161;
   border-radius: 1em;
 }
@@ -35,6 +88,8 @@
   color: #f4f9f4;
   padding: 1em;
   margin: 0;
+  line-height: 1.5em;
+  font-size: 1.2rem;
 }
 .s2 .skill_logos {
   height: 30em;
@@ -42,6 +97,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 .s2 .skill_logos i {
   font-size: 5rem;
