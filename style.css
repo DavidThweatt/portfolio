@@ -2,6 +2,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 .section {
   display: flex;
   align-items: center;
@@ -11,15 +16,30 @@
   background-image: url("./images/fern-unsplash.jpeg") !important;
   background-size: cover !important;
 }
+.s1 .profile_pic {
+  height: auto;
+  width: 15em;
+  border-radius: none;
+}
 .s1 h1 {
   color: white;
   font-size: 4rem;
   font-weight: 800;
 }
+@media (max-width: 550px) {
+  .s1 h1 {
+    font-size: 3rem;
+  }
+}
 .s1 p {
   color: white;
   font-size: 2rem;
   font-weight: 400;
+}
+@media (max-width: 550px) {
+  .s1 p {
+    font-size: 1.2rem;
+  }
 }
 .s1 .typewriter_div {
   width: -webkit-fit-content;
@@ -70,40 +90,134 @@
 
 .s2 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  height: 100%;
+}
+.s2 .about_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+}
+@media (min-width: 767px) {
+  .s2 .about_section {
+    flex-direction: row;
+  }
+}
+.s2 .about_section .about_div {
+  padding: 0 2em 1em 2em;
+  height: 300px;
+  width: 300px;
+}
+.s2 .about_section .about_div h3 {
+  color: #f4f9f4;
+  padding: 0.5em 1em 0.5em 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_div h3 {
+    font-size: 2rem;
+  }
+}
+.s2 .about_section .about_div h4 {
+  color: #f4f9f4;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_div h4 {
+    font-size: 2rem;
+  }
+}
+.s2 .about_section .about_div p {
+  color: #f4f9f4;
+  padding: 1em 1em 1em 0;
+  margin: 0;
+  line-height: 1.75em;
+  font-size: 0.9rem;
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_div p {
+    font-size: 1.2rem;
+  }
+}
+.s2 .about_section .about_div .resume {
+  background-color: #616161;
+  color: #f4f9f4;
+  border-radius: 5px;
+  border: none;
+  height: 2.5em;
+  cursor: pointer;
+}
+.s2 .about_section .about_pic {
+  margin-top: 2em;
+  padding: 1em 2em;
+  height: 160px;
+  width: 300px;
+}
+.s2 .about_section .about_pic img {
+  height: 160px;
+  width: 300px;
 }
 .s2 .skill_info {
-  height: auto;
-  width: 40%;
+  height: 20%;
   background-color: #616161;
   border-radius: 1em;
 }
-.s2 .skill_info h1 {
-  color: #f4f9f4;
-  padding: 0.5em 1em 0 1em;
+.s2 .skill_div {
+  height: 150px;
+  width: 1600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
   margin: 0;
-}
-.s2 .skill_info p {
-  color: #f4f9f4;
-  padding: 1em;
-  margin: 0;
-  line-height: 1.5em;
-  font-size: 1.2rem;
 }
 .s2 .skill_logos {
-  height: 30em;
-  width: 30em;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  display: block;
+  width: 200%;
+  margin: 0;
+  position: absolute;
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
+}
+.s2 .skill_logos span {
+  float: left;
+  width: 50%;
+  background-color: #8aae92 !important;
+}
+@-webkit-keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }
 .s2 .skill_logos i {
   font-size: 5rem;
   padding: 0.5em;
   color: #f4f9f4;
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  float: left;
+  transition: all 0.2s ease-out;
+}
+
+.skill_logos:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .s3 {
