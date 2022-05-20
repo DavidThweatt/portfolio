@@ -12,6 +12,27 @@ body {
   align-items: center;
 }
 
+span {
+  background-color: white !important;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  text-align: center !important;
+}
+
 .s1 {
   background-image: url("./images/fern-unsplash.jpeg") !important;
   background-size: cover !important;
@@ -100,15 +121,18 @@ body {
   justify-content: space-between;
   height: 80%;
 }
-@media (min-width: 767px) {
+@media (min-width: 992px) {
   .s2 .about_section {
     flex-direction: row;
   }
 }
 .s2 .about_section .about_div {
   padding: 4em 2em 1em 2em;
-  height: 300px;
-  width: 300px;
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_div {
+    padding: 2em 2em 1em 2em;
+  }
 }
 .s2 .about_section .about_div h3 {
   color: #f4f9f4;
@@ -124,13 +148,13 @@ body {
 .s2 .about_section .about_div h4 {
   padding: 1em 0 !important;
   color: #f4f9f4;
-  padding: 0;
   margin: 0;
   font-size: 1rem;
 }
 @media (min-width: 767px) {
   .s2 .about_section .about_div h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 0.5em 0 !important;
   }
 }
 .s2 .about_section .about_div p {
@@ -165,12 +189,11 @@ body {
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #313133;
-  background: #4fd1c5;
-  background: linear-gradient(90deg, rgb(129, 230, 217) 0%, rgb(79, 209, 197) 100%);
+  color: #f4f9f4;
+  background: #525e75;
   border: none;
   border-radius: 10px;
-  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  box-shadow: 12px 12px 24px 524999999999999900000000000000000000000000000000000000000000000000000000000000;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -182,7 +205,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 6px solid pink;
+  border: 6px solid #f1ddbf;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -220,7 +243,16 @@ body {
     opacity: 0;
   }
 }
+.s2 .about_section .about_pic_detail {
+  background-color: white;
+  height: 160px;
+  width: 300px;
+  border-color: #525e75 !important;
+  overflow: auto;
+  z-index: 1;
+}
 .s2 .about_section .about_pic {
+  z-index: 2;
   margin-top: 2em;
   padding: 1em 2em;
   height: 160px;
@@ -229,6 +261,11 @@ body {
 @media (max-width: 550px) {
   .s2 .about_section .about_pic {
     visibility: hidden;
+  }
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_pic {
+    margin-top: 1em;
   }
 }
 .s2 .about_section .about_pic img {
@@ -341,25 +378,4 @@ body {
 }
 .s4 .about_links i:hover {
   color: blue;
-}
-
-span {
-  background-color: white !important;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-.slide {
-  display: flex;
-  align-items: center;
-}
-
-ul {
-  text-align: center !important;
 }/*# sourceMappingURL=style.css.map */
