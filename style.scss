@@ -111,14 +111,15 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80%;
+    // height: 80%;
 
-    @include respond-to("medium") {
+    @include respond-to("large") {
       flex-direction: row;
     }
 
     .about_div {
       padding: 4em 2em 1em 2em;
+      max-width: 600px;
 
       @include respond-to("small") {
         padding: 2em 2em 1em 2em;
@@ -134,17 +135,6 @@ ul {
         }
       }
 
-      h4 {
-        padding: 1em 0 !important;
-        color: #f4f9f4;
-        margin: 0;
-        font-size: 1rem;
-        @include respond-to("small") {
-          font-size: 1.5rem;
-          padding: 0.5em 0 !important;
-        }
-      }
-
       p {
         padding: 1em 0;
         color: #f4f9f4;
@@ -153,7 +143,7 @@ ul {
         line-height: 1.75em;
         font-size: 0.9rem;
         @include respond-to("small") {
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
       }
 
@@ -218,53 +208,103 @@ ul {
       }
     }
 
-    .about_pic_detail {
-      background-color: white;
+    .about_pic_container {
+       margin: 20px;
+      position: relative;
+      @include respond-to("phone") {
+        visibility: hidden;
+        height: 1px;
+
+      }
+    }
+
+
+    .dots {
+      height: 300px;
+      width: 350px;
+      z-index: 2;
+      background:
+      linear-gradient(90deg, #8aae92 (22px - 2px), transparent 1%) center,
+      linear-gradient(#8aae92 (22px - 2px), transparent 1%) center,
+      lightgray;
+      background-size: 22px 22px;
+
+      @include respond-to("phone") {
+        visibility: hidden;
+      }
+    }
+    
+
+    .pic_detail {
       height: 160px;
       width: 300px;
-      border-color: #525e75 !important;
-      overflow: auto;
+      border: 5px solid lightgray;
+      border-radius: 2px;
       z-index: 1;
+      margin: 4em 1em 1em 2.3em;
+
+      @include respond-to("small") {
+        margin: 4em 1em 1em 2.3em;
+      }
+    }
+
+    .top_stack {
+      z-index: 3;
+      margin: 25px;
     }
 
     .about_pic {
-      z-index: 2;
-      margin-top: 2em;
-      padding: 1em 2em;
       height: 160px;
       width: 300px;
+      position: absolute;
 
       @include respond-to("phone") {
         visibility: hidden;
       }
 
       @include respond-to("small") {
-        margin-top: 1em;
+        
       }
 
       img {
         height: 160px;
         width: 300px;
+        margin-top: 1.5em;
+        border-radius: 5px;
       }
     }
   }
 
-  .skill_info {
-    height: 20%;
-    background-color: #616161;
-    border-radius: 1em;
+  .skill_title {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      color: #f4f9f4 !important;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+    h2 {
+      text-decoration: underline red 4px;
+      background-color: #8aae92;
+      color: #f4f9f4;
+      padding-left: .3em;
+    }
   }
 
   .skill_div {
-    height: 150px;
+    height: 100px;
     width: 1600px;
     overflow: hidden;
     box-sizing: border-box;
     position: relative;
     margin: 0;
+
   }
 
   .skill_logos {
+    height: 100px;
     display: block;
     width: 200%;
     margin: 0;
@@ -288,7 +328,7 @@ ul {
 
     i {
       font-size: 5rem;
-      padding: 0.5em;
+      padding: 0.1em .5em;
       color: #f4f9f4;
       border-radius: 50px;
       display: inline-block;
