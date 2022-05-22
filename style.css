@@ -33,6 +33,18 @@ ul {
   text-align: center !important;
 }
 
+.line {
+  display: block;
+  position: absolute;
+  top: 42%;
+  right: 30.1px;
+  height: 40%;
+  width: 1px;
+  border-right: 2px solid gray;
+  z-index: 9;
+  border-radius: 10px;
+}
+
 .s1 {
   background-image: url("./images/fern-unsplash.jpeg") !important;
   background-size: cover !important;
@@ -112,26 +124,26 @@ ul {
 .s2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
 }
 .s2 .about_section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 @media (min-width: 1200px) {
   .s2 .about_section {
     flex-direction: row;
+    margin-top: 7em;
   }
 }
 .s2 .about_section .about_div {
-  padding: 4em 2em 1em 2em;
+  padding: 2em 2em 1em 2em;
   max-width: 600px;
 }
-@media (min-width: 767px) {
+@media (min-width: 1200px) {
   .s2 .about_section .about_div {
-    padding: 2em 2em 1em 2em;
+    margin-right: 3em;
   }
 }
 .s2 .about_section .about_div h3 {
@@ -140,7 +152,7 @@ ul {
   margin: 0;
   font-size: 1.5rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 1200px) {
   .s2 .about_section .about_div h3 {
     font-size: 2rem;
   }
@@ -153,7 +165,7 @@ ul {
   line-height: 1.75em;
   font-size: 0.9rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 1200px) {
   .s2 .about_section .about_div p {
     font-size: 1rem;
   }
@@ -239,6 +251,12 @@ ul {
   .s2 .about_section .about_pic_container {
     visibility: hidden;
     height: 1px;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .s2 .about_section .about_pic_container {
+    margin-left: 3em;
   }
 }
 .s2 .about_section .dots {
@@ -251,6 +269,8 @@ ul {
 @media (max-width: 550px) {
   .s2 .about_section .dots {
     visibility: hidden;
+    height: 0px;
+    width: 0px;
   }
 }
 .s2 .about_section .pic_detail {
@@ -260,6 +280,11 @@ ul {
   border-radius: 2px;
   z-index: 1;
   margin: 4em 1em 1em 2.3em;
+}
+@media (max-width: 550px) {
+  .s2 .about_section .pic_detail {
+    border: none;
+  }
 }
 @media (min-width: 767px) {
   .s2 .about_section .pic_detail {
@@ -278,6 +303,9 @@ ul {
 @media (max-width: 550px) {
   .s2 .about_section .about_pic {
     visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
   }
 }
 .s2 .about_section .about_pic img {
@@ -287,7 +315,10 @@ ul {
   border-radius: 5px;
 }
 .s2 .skill_title {
+  background-color: #BDD2B6;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .s2 .skill_title h1 {
@@ -295,13 +326,25 @@ ul {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
+  padding-bottom: 0.5em;
+}
+@media (min-width: 767px) {
+  .s2 .skill_title h1 {
+    padding-bottom: 1em;
+  }
 }
 .s2 .skill_title h2 {
-  -webkit-text-decoration: underline red 4px;
-          text-decoration: underline red 4px;
-  background-color: #8aae92;
+  -webkit-text-decoration: underline gray 4px;
+          text-decoration: underline gray 4px;
+  background-color: #BDD2B6;
   color: #f4f9f4;
   padding-left: 0.3em;
+  padding-bottom: 0.5em;
+}
+@media (min-width: 767px) {
+  .s2 .skill_title h2 {
+    padding-bottom: 1em;
+  }
 }
 .s2 .skill_div {
   height: 100px;
@@ -310,6 +353,7 @@ ul {
   box-sizing: border-box;
   position: relative;
   margin: 0;
+  bottom: 0;
 }
 .s2 .skill_logos {
   height: 100px;
@@ -323,7 +367,7 @@ ul {
 .s2 .skill_logos span {
   float: left;
   width: 50%;
-  background-color: #8aae92 !important;
+  background-color: #BDD2B6 !important;
 }
 @-webkit-keyframes scroll {
   0% {
@@ -343,7 +387,8 @@ ul {
 }
 .s2 .skill_logos i {
   font-size: 5rem;
-  padding: 0.1em 0.5em;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
   color: #f4f9f4;
   border-radius: 50px;
   display: inline-block;

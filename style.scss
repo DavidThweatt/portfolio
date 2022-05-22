@@ -35,6 +35,22 @@ ul {
   text-align: center !important;
 }
 
+.line {
+  display: block;
+  position: absolute;
+  top: 42%;
+  right: 30.1px;
+  height: 40%;
+  width: 1px;
+  border-right: 2px solid gray;
+  z-index: 9;
+  border-radius: 10px;
+
+  // @include respond-to("phone") {
+  //   visibility: hidden;
+  // }
+}
+
 // Section 1
 
 .s1 {
@@ -104,25 +120,24 @@ ul {
 .s2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
 
   .about_section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    // height: 80%;
-
+    
     @include respond-to("large") {
       flex-direction: row;
+      margin-top: 7em;
     }
 
     .about_div {
-      padding: 4em 2em 1em 2em;
+      padding: 2em 2em 1em 2em;
       max-width: 600px;
 
-      @include respond-to("small") {
-        padding: 2em 2em 1em 2em;
+      @include respond-to("large") {
+        margin-right: 3em ;
       }
 
       h3 {
@@ -130,7 +145,7 @@ ul {
         padding: 0.5em 1em 0.5em 0;
         margin: 0;
         font-size: 1.5rem;
-        @include respond-to("small") {
+        @include respond-to("large") {
           font-size: 2rem;
         }
       }
@@ -142,7 +157,7 @@ ul {
         margin: 0;
         line-height: 1.75em;
         font-size: 0.9rem;
-        @include respond-to("small") {
+        @include respond-to("large") {
           font-size: 1rem;
         }
       }
@@ -214,7 +229,11 @@ ul {
       @include respond-to("phone") {
         visibility: hidden;
         height: 1px;
+        margin: 0;
+      }
 
+      @include respond-to("large") {
+        margin-left: 3em ;
       }
     }
 
@@ -231,6 +250,8 @@ ul {
 
       @include respond-to("phone") {
         visibility: hidden;
+        height: 0px;
+        width: 0px;
       }
     }
     
@@ -242,6 +263,10 @@ ul {
       border-radius: 2px;
       z-index: 1;
       margin: 4em 1em 1em 2.3em;
+
+      @include respond-to("phone") {
+       border: none;
+      }
 
       @include respond-to("small") {
         margin: 4em 1em 1em 2.3em;
@@ -260,6 +285,9 @@ ul {
 
       @include respond-to("phone") {
         visibility: hidden;
+        height: 0;
+        width: 0;
+        margin: 0;
       }
 
       @include respond-to("small") {
@@ -276,7 +304,10 @@ ul {
   }
 
   .skill_title {
+    background-color: #BDD2B6;
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     h1 {
@@ -284,12 +315,22 @@ ul {
       margin: 0;
       padding: 0;
       font-size: 1.5rem;
+      padding-bottom: .5em;
+      @include respond-to("small") {
+        padding-bottom: 1em;
+      }
+     
     }
     h2 {
-      text-decoration: underline red 4px;
-      background-color: #8aae92;
+      text-decoration: underline gray 4px;
+      background-color: #BDD2B6;
       color: #f4f9f4;
       padding-left: .3em;
+      padding-bottom: .5em;
+      @include respond-to("small") {
+        padding-bottom: 1em;
+      }
+      
     }
   }
 
@@ -300,7 +341,7 @@ ul {
     box-sizing: border-box;
     position: relative;
     margin: 0;
-
+    bottom: 0;
   }
 
   .skill_logos {
@@ -314,7 +355,7 @@ ul {
     span {
       float: left;
       width: 50%;
-      background-color: #8aae92 !important;
+      background-color: #BDD2B6!important;
     }
 
     @keyframes scroll {
@@ -328,7 +369,8 @@ ul {
 
     i {
       font-size: 5rem;
-      padding: 0.1em .5em;
+      padding-left: 1em;
+      padding-bottom: .3em;
       color: #f4f9f4;
       border-radius: 50px;
       display: inline-block;
