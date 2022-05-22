@@ -433,6 +433,70 @@ ul {
 // Section 4
 
 .s4 {
+
+  .phone_email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond-to("small") {
+      flex-direction: row;
+      justify-content: space-around !important;
+    }
+
+    .phone_icon_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      figure {
+        display: flex;
+        justify-content: center;
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .email_icon_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      figure {
+        display: flex;
+        justify-content: center;
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .form {
+
+      #name {
+        height: 65px;
+        width: 200px;
+      }
+
+      .form-email {
+
+      }
+
+      .form-input {
+
+      }
+
+      .form-button {
+
+      }
+    }
+  }
+
   .about_links {
     padding: 1em 0;
     i {
@@ -443,7 +507,7 @@ ul {
     }
 
     i:hover {
-      color: blue;
+      color: pink;
     }
   }
 }
