@@ -122,24 +122,43 @@ ul {
 }
 
 .s2 {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .s2 .about_section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   .s2 .about_section {
     flex-direction: row;
+    align-items: center;
     margin-top: 7em;
   }
 }
 .s2 .about_section .about_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 2em 2em 1em 2em;
   max-width: 600px;
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_div {
+    margin-left: 3em;
+  }
+}
+@media (min-width: 992px) {
+  .s2 .about_section .about_div {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 @media (min-width: 1200px) {
   .s2 .about_section .about_div {
@@ -185,7 +204,7 @@ ul {
 .s2 .about_section .about_div .wrap .button {
   min-width: 100px;
   min-height: 50px;
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -193,7 +212,7 @@ ul {
   background: #525e75;
   border: none;
   border-radius: 10px;
-  box-shadow: 12px 12px 24px 524999999999999900000000000000000000000000000000000000000000000000000000000000;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -244,14 +263,22 @@ ul {
   }
 }
 .s2 .about_section .about_pic_container {
+  display: flex;
   margin: 20px;
   position: relative;
+  justify-content: center;
 }
 @media (max-width: 550px) {
   .s2 .about_section .about_pic_container {
     visibility: hidden;
     height: 1px;
     margin: 0;
+  }
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_pic_container {
+    justify-content: flex-end;
+    margin-right: 5em;
   }
 }
 @media (min-width: 1200px) {
@@ -313,6 +340,7 @@ ul {
   width: 300px;
   margin-top: 1.5em;
   border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 .s2 .skill_title {
   background-color: #BDD2B6;
@@ -439,15 +467,30 @@ ul {
   background-color: whitesmoke;
 }
 
+.s4 {
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+}
+.s4 h1 {
+  margin-bottom: 0.2em;
+}
+@media (min-width: 767px) {
+  .s4 h1 {
+    margin-top: 2em;
+  }
+}
 .s4 .phone_email {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 @media (min-width: 767px) {
   .s4 .phone_email {
     flex-direction: row;
-    justify-content: space-around !important;
+    justify-content: center;
   }
 }
 .s4 .phone_email .phone_icon_div {
@@ -455,40 +498,176 @@ ul {
   flex-direction: column;
   justify-content: center;
 }
+@media (min-width: 767px) {
+  .s4 .phone_email .phone_icon_div {
+    margin: 0 5em 0 0;
+  }
+}
 .s4 .phone_email .phone_icon_div figure {
   display: flex;
   justify-content: center;
+  height: 1.5em;
+  margin-bottom: 0.2em;
+}
+@media (min-width: 767px) {
+  .s4 .phone_email .phone_icon_div figure {
+    height: 3em;
+  }
 }
 .s4 .phone_email .phone_icon_div p {
   display: flex;
   justify-content: center;
+  font-size: 0.9rem;
+}
+.s4 .phone_email .address_icon_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.s4 .phone_email .address_icon_div figure {
+  display: flex;
+  justify-content: center;
+  height: 1.5em;
+  margin-bottom: 0.2em;
+}
+@media (min-width: 767px) {
+  .s4 .phone_email .address_icon_div figure {
+    height: 3em;
+  }
+}
+.s4 .phone_email .address_icon_div p {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
 }
 .s4 .phone_email .email_icon_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media (min-width: 767px) {
+  .s4 .phone_email .email_icon_div {
+    margin: 0 0 0 5em;
+  }
+}
 .s4 .phone_email .email_icon_div figure {
   display: flex;
   justify-content: center;
+  height: 1.5em;
+  margin-bottom: 0.2em;
+}
+@media (min-width: 767px) {
+  .s4 .phone_email .email_icon_div figure {
+    height: 3em;
+  }
 }
 .s4 .phone_email .email_icon_div p {
   display: flex;
   justify-content: center;
+  font-size: 0.9rem;
 }
-.s4 .phone_email .form #name {
-  height: 65px;
-  width: 200px;
+.s4 .form {
+  display: flex;
+  flex-direction: column;
 }
-.s4 .about_links {
-  padding: 1em 0;
+.s4 .form .name_email {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.s4 .about_links i {
+@media (min-width: 767px) {
+  .s4 .form .name_email {
+    flex-direction: row;
+  }
+}
+.s4 .form .name_email #name {
+  margin: 1em;
+  height: 40px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  text-indent: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+@media (min-width: 767px) {
+  .s4 .form .name_email #name {
+    height: 50px;
+    width: 300px;
+  }
+}
+.s4 .form .name_email #email {
+  margin: 1em;
+  height: 40px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  text-indent: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+@media (min-width: 767px) {
+  .s4 .form .name_email #email {
+    height: 50px;
+    width: 300px;
+  }
+}
+.s4 .form #message_area {
+  margin: 1em;
+  height: 80px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  text-indent: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+@media (min-width: 767px) {
+  .s4 .form #message_area {
+    height: 150px;
+    width: 632px;
+  }
+}
+.s4 .form .button {
+  margin: 1em;
+  height: 35px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: #525e75;
   color: #f4f9f4;
-  font-size: 1.8rem;
   cursor: pointer;
-  padding: 0.5em 0.5em 0.5em 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-family: "Montserrat", sans-serif;
 }
-.s4 .about_links i:hover {
+@media (min-width: 767px) {
+  .s4 .form .button {
+    height: 45px;
+    width: 140px;
+  }
+}
+.s4 .footer {
+  background-color: #8aae92;
+  height: 170px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.s4 .footer .about_links {
+  display: flex;
+  justify-content: center;
+}
+.s4 .footer .about_links i {
+  color: #f4f9f4;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1em;
+}
+.s4 .footer .about_links i:hover {
   color: pink;
+}
+.s4 .footer p {
+  text-align: center;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */

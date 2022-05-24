@@ -176,6 +176,12 @@
             </figure>
             <p>(480) 295 9423</p>
           </div>
+          <div class="address_icon_div">
+            <figure>
+              <img src="./images/map-pin-line.svg" alt="" />
+            </figure>
+            <p>Phoenix, AZ</p>
+          </div>
           <div class="email_icon_div">
             <figure>
               <img src="./images/mail-line.svg" alt="" />
@@ -185,7 +191,7 @@
         </div>
         <div>
           <form action="" method="get" class="form">
-            <div class="form-name">
+            <div class="name_email">
               <input
                 type="text"
                 name="name"
@@ -193,8 +199,6 @@
                 placeholder="Name"
                 required
               />
-            </div>
-            <div class="form-email">
               <input
                 type="email"
                 name="email"
@@ -203,18 +207,12 @@
                 required
               />
             </div>
-            <div class="form-input">
-              <input
-                type="input"
-                name="input"
-                id="input"
-                placeholder="Your message here"
-                required
-              />
-            </div>
-            <div class="form-button">
-              <input type="submit" value="Send" />
-            </div>
+            <textarea
+              id="message_area"
+              placeholder="Your message here"
+              required
+            ></textarea>
+            <input type="submit" value="Send" class="button" />
           </form>
         </div>
         <div class="footer">
