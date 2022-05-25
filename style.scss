@@ -263,7 +263,6 @@ ul {
       }
     }
 
-
     .dots {
       height: 300px;
       width: 350px;
@@ -422,11 +421,12 @@ ul {
   justify-content: center;
 
   .arrow-left {
-    margin-left: 5%;
+    margin-left: 3%;
+    
   }
 
   .arrow-right {
-    margin-right: 5%;
+    margin-right: 3%;
   }
 
   .fp-slides {
@@ -435,25 +435,37 @@ ul {
     margin: 0;
   }
 
-  .slide1_main {
-    height: 60%;
-    width: 60%;
-    background-color: #616161;
+  .slide {
     display: flex;
-    justify-content: space-between;
-    padding: 1em;
+    justify-content: center;
 
-    .slide1_info {
-      padding: 1em;
-      height: 200px;
-      width: 200px;
+    @include respond-to("small") {
     }
 
-    .slide1_project {
+    @include respond-to("medium") {
+      flex-direction: row;
+    }
+
+    @include respond-to("large") {
+    }
+
+    .slide_project {
       padding: 1em;
-      height: 400px;
-      width: 250px;
+      margin: 2em;
+      height: 180px;
+      width: 180px;
       background-color: whitesmoke;
+
+      @include respond-to("small") {
+        height: 300px;
+        width: 300px;
+       
+      }
+  
+      @include respond-to("large") {
+        margin: 8em;
+      }
+  
     }
   }
 }
