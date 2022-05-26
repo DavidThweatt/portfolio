@@ -13,7 +13,7 @@ body {
 }
 
 span {
-  background-color: white !important;
+  background-color: #383838 !important;
 }
 
 h1 {
@@ -40,7 +40,7 @@ ul {
   right: 30.1px;
   height: 40%;
   width: 1px;
-  border-right: 2px solid gray;
+  border-right: 2px solid #6D8B74;
   z-index: 9;
   border-radius: 10px;
 }
@@ -55,7 +55,7 @@ ul {
   border-radius: none;
 }
 .s1 h1 {
-  color: white;
+  color: #F4F4F2;
   font-size: 4rem;
   font-weight: 800;
 }
@@ -65,7 +65,7 @@ ul {
   }
 }
 .s1 p {
-  color: white;
+  color: #F4F4F2;
   font-size: 2rem;
   font-weight: 400;
 }
@@ -166,7 +166,7 @@ ul {
   }
 }
 .s2 .about_section .about_div h3 {
-  color: #f4f9f4;
+  color: #383838;
   padding: 0.5em 1em 0.5em 0;
   margin: 0;
   font-size: 1.5rem;
@@ -178,7 +178,7 @@ ul {
 }
 .s2 .about_section .about_div p {
   padding: 1em 0;
-  color: #f4f9f4;
+  color: #383838;
   padding: 1em 1em 1em 0;
   margin: 0;
   line-height: 1.75em;
@@ -208,8 +208,8 @@ ul {
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #f4f9f4;
-  background: #525e75;
+  color: #E8E8E8;
+  background: #383838;
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
@@ -224,7 +224,7 @@ ul {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  border: 6px solid #f1ddbf;
+  border: 6px solid #6D8B74;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -290,7 +290,7 @@ ul {
   height: 300px;
   width: 350px;
   z-index: 2;
-  background: linear-gradient(90deg, #8aae92 20px, transparent 1%) center, linear-gradient(#8aae92 20px, transparent 1%) center, lightgray;
+  background: linear-gradient(90deg, #F4F4F2 20px, transparent 1%) center, linear-gradient(#F4F4F2 20px, transparent 1%) center, #6D8B74;
   background-size: 22px 22px;
 }
 @media (max-width: 550px) {
@@ -343,14 +343,14 @@ ul {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 .s2 .skill_title {
-  background-color: #BDD2B6;
+  background-color: #6d8b74;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .s2 .skill_title h1 {
-  color: #f4f9f4 !important;
+  color: #383838 !important;
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -362,10 +362,10 @@ ul {
   }
 }
 .s2 .skill_title h2 {
-  -webkit-text-decoration: underline gray 4px;
-          text-decoration: underline gray 4px;
-  background-color: #BDD2B6;
-  color: #f4f9f4;
+  -webkit-text-decoration: underline #D0C9C0 4px;
+          text-decoration: underline #D0C9C0 4px;
+  background-color: #6d8b74;
+  color: #383838;
   padding-left: 0.3em;
   padding-bottom: 0.5em;
 }
@@ -395,7 +395,7 @@ ul {
 .s2 .skill_logos span {
   float: left;
   width: 50%;
-  background-color: #BDD2B6 !important;
+  background-color: #6d8b74 !important;
 }
 @-webkit-keyframes scroll {
   0% {
@@ -417,7 +417,7 @@ ul {
   font-size: 5rem;
   padding-left: 1em;
   padding-bottom: 0.3em;
-  color: #f4f9f4;
+  color: #383838;
   border-radius: 50px;
   display: inline-block;
   margin: 0;
@@ -431,13 +431,12 @@ ul {
 }
 
 .s3 {
-  background-image: url("./images/project-wall-sand.jpeg") !important;
-  background-size: cover !important;
   display: flex;
   justify-content: center;
 }
 .s3 .arrow-left {
   margin-left: 3%;
+  color: #6D8B74;
 }
 .s3 .arrow-right {
   margin-right: 3%;
@@ -461,7 +460,9 @@ ul {
   margin: 2em;
   height: 180px;
   width: 180px;
-  background-color: whitesmoke;
+  background-color: black;
+  border: solid #6D8B74 30px;
+  border-radius: 5px;
 }
 @media (min-width: 767px) {
   .s3 .slide .slide_project {
@@ -642,8 +643,8 @@ ul {
   width: 100px;
   border: none;
   border-radius: 10px;
-  background-color: #525e75;
-  color: #f4f9f4;
+  background-color: #6D8B74;
+  color: #F4F4F2;
   cursor: pointer;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   font-family: "Montserrat", sans-serif;
@@ -655,7 +656,7 @@ ul {
   }
 }
 .s4 .footer {
-  background-color: #8aae92;
+  background-color: #5F7161;
   height: 170px;
   width: 100%;
   display: flex;
@@ -667,15 +668,18 @@ ul {
   justify-content: center;
 }
 .s4 .footer .about_links i {
-  color: #f4f9f4;
+  color: #F4F4F2;
   font-size: 2rem;
   cursor: pointer;
-  padding: 0 1em;
+  padding: 1em;
 }
 .s4 .footer .about_links i:hover {
-  color: pink;
+  color: #D0C9C0;
+  font-size: 3rem;
+  padding: 0.5em;
 }
 .s4 .footer p {
   text-align: center;
   font-size: 0.9rem;
+  color: #F4F4F2;
 }/*# sourceMappingURL=style.css.map */
