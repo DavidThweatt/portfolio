@@ -668,17 +668,20 @@ ul {
     .about_links {
       display: flex;
       justify-content: center;
-      i {
+      a {
         color: #F4F4F2;
         font-size: 2rem;
         cursor: pointer;
         padding: 1em;
+        text-decoration: none;
+        transition-duration: 500ms;
       }
   
-      i:hover {
+      a:hover {
         color: #D0C9C0;
         font-size: 3rem;
         padding: .5em;
+        transition-duration: 250ms;
       }
     }
 

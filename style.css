@@ -667,16 +667,19 @@ ul {
   display: flex;
   justify-content: center;
 }
-.s4 .footer .about_links i {
+.s4 .footer .about_links a {
   color: #F4F4F2;
   font-size: 2rem;
   cursor: pointer;
   padding: 1em;
+  text-decoration: none;
+  transition-duration: 500ms;
 }
-.s4 .footer .about_links i:hover {
+.s4 .footer .about_links a:hover {
   color: #D0C9C0;
   font-size: 3rem;
   padding: 0.5em;
+  transition-duration: 250ms;
 }
 .s4 .footer p {
   text-align: center;
