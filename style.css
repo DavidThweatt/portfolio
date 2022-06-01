@@ -342,6 +342,10 @@ ul {
   border-radius: 5px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
+.s2 .skill_container {
+  background-color: #6d8b74 !important;
+  width: 100% !important;
+}
 .s2 .skill_title {
   background-color: #6d8b74;
   width: 100%;
@@ -455,14 +459,32 @@ ul {
     flex-direction: row;
   }
 }
+.s3 .slide .project_div {
+  background-color: #6D8B74;
+  height: 320px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+}
+.s3 .slide .project_div h2 {
+  margin: 1em;
+  font-size: 16px;
+}
+.s3 .slide .project_div button {
+  margin: 16px;
+  padding: 0;
+  width: 5em;
+  height: 2em;
+  border: none;
+  border-radius: 5px;
+}
 .s3 .slide .slide_project {
-  padding: 1em;
-  margin: 2em;
+  margin: 1em;
   height: 180px;
   width: 180px;
   background-color: black;
-  border: solid #6D8B74 30px;
-  border-radius: 5px;
 }
 @media (min-width: 767px) {
   .s3 .slide .slide_project {

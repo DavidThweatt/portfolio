@@ -326,6 +326,11 @@ ul {
     }
   }
 
+  .skill_container {
+    background-color: #6d8b74 !important;
+    width: 100% !important;
+  }
+
   .skill_title {
     background-color: #6d8b74;
     width: 100%;
@@ -357,6 +362,7 @@ ul {
   }
 
   .skill_div {
+
     height: 100px;
     width: 1600px;
     overflow: hidden;
@@ -412,8 +418,6 @@ ul {
 // Section 3
 
 .s3 {
-  // background-image: url("./images/project-wall-sand.jpeg") !important;
-  // background-size: cover !important;
   display: flex;
   justify-content: center;
 
@@ -446,14 +450,35 @@ ul {
     @include respond-to("large") {
     }
 
+    .project_div {
+       background-color: #6D8B74;
+       height: 320px;
+       width: 220px;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       margin-bottom: 1em;
+
+       h2 {
+        margin: 1em;
+        font-size: 16px;
+       }
+
+       button {
+        margin: 16px;
+        padding: 0;
+        width: 5em;
+        height: 2em;
+        border: none;
+        border-radius: 5px;
+       }
+    }
+
     .slide_project {
-      padding: 1em;
-      margin: 2em;
+      margin: 1em;
       height: 180px;
       width: 180px;
       background-color: black;
-      border: solid #6D8B74 30px;
-      border-radius: 5px;
 
       @include respond-to("small") {
         height: 300px;
