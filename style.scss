@@ -478,7 +478,8 @@ ul {
       margin: 1em;
       height: 180px;
       width: 180px;
-      background-color: black;
+      background-image: url("./images/where-in-the-world.jpeg") !important;
+      background-size: cover !important;
 
       @include respond-to("small") {
         height: 300px;
