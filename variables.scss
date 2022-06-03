@@ -2,6 +2,9 @@ $breakpoints: (
   "phone": (
     max-width: 550px,
   ),
+  "phone-up": (
+    min-width: 550px,
+  ),
   "small": (
     min-width: 767px,
   ),

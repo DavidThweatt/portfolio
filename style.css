@@ -46,7 +46,7 @@ ul {
 }
 
 .s1 {
-  background-image: url("./images/fern-unsplash.jpeg") !important;
+  background-image: url("./images/monsterra.jpeg") !important;
   background-size: cover !important;
 }
 .s1 .profile_pic {
@@ -437,13 +437,55 @@ ul {
 .s3 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  background-image: url("./images/temple.jpeg") !important;
+  background-size: cover !important;
+}
+.s3 .title-s3 {
+  color: #383838;
+}
+@media (max-width: 550px) {
+  .s3 .title-s3 {
+    visibility: hidden;
+    margin: 0;
+  }
+}
+@media (min-width: 550px) {
+  .s3 .title-s3 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 767px) {
+  .s3 .title-s3 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .s3 .title-s3 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .s3 .title-s3 {
+    font-size: 5rem;
+  }
 }
 .s3 .arrow-left {
   margin-left: 3%;
   color: #6D8B74;
 }
+@media (max-width: 550px) {
+  .s3 .arrow-left {
+    visibility: hidden;
+  }
+}
 .s3 .arrow-right {
   margin-right: 3%;
+}
+@media (max-width: 550px) {
+  .s3 .arrow-right {
+    visibility: hidden;
+  }
 }
 .s3 .fp-slides {
   height: 100%;
@@ -454,7 +496,7 @@ ul {
   display: flex;
   justify-content: center;
 }
-@media (min-width: 992px) {
+@media (min-width: 767px) {
   .s3 .slide {
     flex-direction: row;
   }
@@ -462,40 +504,109 @@ ul {
 .s3 .slide .project_div {
   background-color: #6D8B74;
   height: 320px;
-  width: 220px;
+  width: 280px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 767px) {
+  .s3 .slide .project_div {
+    margin: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .s3 .slide .project_div {
+    margin: 2em;
+    height: 420px;
+    width: 380px;
+  }
+}
+@media (min-width: 1200px) {
+  .s3 .slide .project_div {
+    margin: 2em;
+    height: 480px;
+    width: 440px;
+  }
 }
 .s3 .slide .project_div h2 {
   margin: 1em;
-  font-size: 16px;
+  font-size: 18px;
+  color: #383838;
 }
-.s3 .slide .project_div button {
-  margin: 16px;
-  padding: 0;
+@media (min-width: 992px) {
+  .s3 .slide .project_div h2 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .s3 .slide .project_div h2 {
+    font-size: 24px;
+  }
+}
+.s3 .slide .project_div .code_btn {
+  text-align: center;
+  margin: 0.5em;
+  padding: 0.3em;
   width: 5em;
   height: 2em;
   border: none;
   border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #D0C9C0;
+  color: #383838;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .s3 .slide .project_div .code_btn {
+    padding: 0.3em;
+    font-size: 18px;
+    margin: 1em 0.5em 1.5em 0.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .s3 .slide .project_div .code_btn {
+    padding: 0.3em;
+    font-size: 20px;
+    margin: 1.5em 0.5em 1em 0.5em;
+  }
 }
 .s3 .slide .slide_project {
-  margin: 1em;
-  height: 180px;
-  width: 180px;
-  background-image: url("./images/where-in-the-world.jpeg") !important;
-  background-size: cover !important;
+  margin: 0.5em;
+  height: 200px;
+  width: 250px;
 }
-@media (min-width: 767px) {
+@media (min-width: 992px) {
   .s3 .slide .slide_project {
-    height: 300px;
-    width: 300px;
+    height: 270px;
+    width: 330px;
   }
 }
 @media (min-width: 1200px) {
   .s3 .slide .slide_project {
-    margin: 8em;
+    height: 300px;
+    width: 380px;
+  }
+}
+.s3 .slide .slide_project .pic {
+  height: 200px;
+  width: 250px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .s3 .slide .slide_project .pic {
+    height: 270px;
+    width: 330px;
+  }
+}
+@media (min-width: 1200px) {
+  .s3 .slide .slide_project .pic {
+    height: 300px;
+    width: 380px;
   }
 }
 

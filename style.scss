@@ -50,7 +50,7 @@ ul {
 // Section 1
 
 .s1 {
-  background-image: url("./images/fern-unsplash.jpeg") !important;
+  background-image: url("./images/monsterra.jpeg") !important;
   background-size: cover !important;
 
   .profile_pic {
@@ -420,14 +420,44 @@ ul {
 .s3 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  background-image: url("./images/temple.jpeg") !important;
+  background-size: cover !important;
+
+  .title-s3 {
+    color: #383838;
+    @include respond-to("phone") {
+      visibility: hidden;
+      margin: 0;
+    }
+    @include respond-to("phone-up") {
+      font-size: 2rem;
+    }
+    @include respond-to("small") {
+      font-size: 3rem;
+    }
+    @include respond-to("medium") {
+      font-size: 4rem;
+    }
+    @include respond-to("large") {
+      font-size: 5rem;
+    }
+  }
 
   .arrow-left {
     margin-left: 3%;
     color: #6D8B74;
+
+    @include respond-to("phone") {
+      visibility: hidden;
+    }
   }
 
   .arrow-right {
     margin-right: 3%;
+    @include respond-to("phone") {
+      visibility: hidden;
+    }
   }
 
   .fp-slides {
@@ -441,54 +471,112 @@ ul {
     justify-content: center;
 
     @include respond-to("small") {
-    }
-
-    @include respond-to("medium") {
       flex-direction: row;
-    }
-
-    @include respond-to("large") {
+      
     }
 
     .project_div {
        background-color: #6D8B74;
        height: 320px;
-       width: 220px;
+       width: 280px;
        display: flex;
        flex-direction: column;
-       justify-content: flex-start;
+       justify-content: center;
+       align-items: center;
        margin-bottom: 1em;
+       border-radius: 5px;
+       box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+
+      @include respond-to("small") {
+        margin: 2em;
+      }
+
+      @include respond-to("medium") {
+        margin: 2em;
+        height: 420px;
+       width: 380px;
+      }
+
+      @include respond-to("large") {
+        margin: 2em;
+        height: 480px;
+       width: 440px;
+      }
 
        h2 {
         margin: 1em;
-        font-size: 16px;
+        font-size: 18px;
+        color: #383838;
+
+        @include respond-to("medium") {
+          font-size: 22px;
+        }
+
+        @include respond-to("large") {
+          font-size: 24px;
+        }
        }
 
-       button {
-        margin: 16px;
-        padding: 0;
-        width: 5em;
-        height: 2em;
-        border: none;
-        border-radius: 5px;
+       .code_btn {
+          text-align: center;
+          margin:  .5em;
+          padding: .3em;
+          width: 5em;
+          height: 2em;
+          border: none;
+          border-radius: 5px;
+          font-family: "Montserrat", sans-serif;
+          background-color: #D0C9C0;
+          color: #383838;
+          cursor: pointer;
+          text-decoration: none;
+
+        @include respond-to("medium") {
+          padding: .3em;
+          font-size: 18px;
+          margin: 1em 0.5em 1.5em 0.5em;
+        }
+        @include respond-to("large") {
+          padding: .3em;
+          font-size: 20px;
+          margin: 1.5em 0.5em 1em 0.5em;
+        }
+    
        }
     }
 
-    .slide_project {
-      margin: 1em;
-      height: 180px;
-      width: 180px;
-      background-image: url("./images/where-in-the-world.jpeg") !important;
-      background-size: cover !important;
+   
 
-      @include respond-to("small") {
-        height: 300px;
-        width: 300px;
-       
+    .slide_project {
+      margin: .5em;
+      height: 200px;
+      width: 250px;
+      
+
+      @include respond-to("medium") {
+        height: 270px;
+        width: 330px;
       }
   
       @include respond-to("large") {
-        margin: 8em;
+        height: 300px;
+        width: 380px;
+      }
+
+      .pic {
+        height: 200px;
+        width: 250px;
+        cursor: pointer;
+
+        @include respond-to("medium") {
+          height: 270px;
+          width: 330px;
+        }
+
+        @include respond-to("large") {
+          height: 300px;
+          width: 380px;
+        }
       }
   
     }
