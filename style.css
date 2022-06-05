@@ -502,9 +502,9 @@ ul {
   }
 }
 .s3 .slide .project_div {
-  background-color: #6D8B74;
-  height: 320px;
-  width: 280px;
+  background-color: rgba(68, 105, 67, 0.5);
+  height: 220px;
+  width: 270px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -532,27 +532,13 @@ ul {
     width: 440px;
   }
 }
-.s3 .slide .project_div h2 {
-  margin: 1em;
-  font-size: 18px;
-  color: #383838;
-}
-@media (min-width: 992px) {
-  .s3 .slide .project_div h2 {
-    font-size: 22px;
-  }
-}
-@media (min-width: 1200px) {
-  .s3 .slide .project_div h2 {
-    font-size: 24px;
-  }
-}
 .s3 .slide .project_div .code_btn {
+  visibility: hidden;
   text-align: center;
   margin: 0.5em;
   padding: 0.3em;
-  width: 5em;
-  height: 2em;
+  width: 4em;
+  height: 1.5em;
   border: none;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
@@ -576,9 +562,13 @@ ul {
   }
 }
 .s3 .slide .slide_project {
-  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0.75em;
   height: 200px;
   width: 250px;
+  margin-bottom: 1em;
 }
 @media (min-width: 992px) {
   .s3 .slide .slide_project {
@@ -595,6 +585,7 @@ ul {
 .s3 .slide .slide_project .pic {
   height: 200px;
   width: 250px;
+  margin-bottom: 1em;
   cursor: pointer;
 }
 @media (min-width: 992px) {

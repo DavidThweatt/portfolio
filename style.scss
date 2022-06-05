@@ -472,13 +472,12 @@ ul {
 
     @include respond-to("small") {
       flex-direction: row;
-      
     }
 
     .project_div {
-       background-color: #6D8B74;
-       height: 320px;
-       width: 280px;
+       background-color: rgba(68, 105, 67, 0.5);
+       height: 220px;
+       width: 270px;
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -487,42 +486,31 @@ ul {
        border-radius: 5px;
        box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 
-      @include respond-to("small") {
-        margin: 2em;
-      }
-
-      @include respond-to("medium") {
-        margin: 2em;
-        height: 420px;
-       width: 380px;
-      }
-
-      @include respond-to("large") {
-        margin: 2em;
-        height: 480px;
-       width: 440px;
-      }
-
-       h2 {
-        margin: 1em;
-        font-size: 18px;
-        color: #383838;
+        @include respond-to("small") {
+          margin: 2em;
+        }
 
         @include respond-to("medium") {
-          font-size: 22px;
+          margin: 2em;
+          height: 420px;
+        width: 380px;
         }
 
         @include respond-to("large") {
-          font-size: 24px;
+          margin: 2em;
+          height: 480px;
+        width: 440px;
         }
-       }
+
+    
 
        .code_btn {
+         visibility: hidden;
           text-align: center;
           margin:  .5em;
           padding: .3em;
-          width: 5em;
-          height: 2em;
+          width: 4em;
+          height: 1.5em;
           border: none;
           border-radius: 5px;
           font-family: "Montserrat", sans-serif;
@@ -531,27 +519,27 @@ ul {
           cursor: pointer;
           text-decoration: none;
 
-        @include respond-to("medium") {
-          padding: .3em;
-          font-size: 18px;
-          margin: 1em 0.5em 1.5em 0.5em;
+          @include respond-to("medium") {
+            padding: .3em;
+            font-size: 18px;
+            margin: 1em 0.5em 1.5em 0.5em;
+          }
+          @include respond-to("large") {
+            padding: .3em;
+            font-size: 20px;
+            margin: 1.5em 0.5em 1em 0.5em;
+          }
         }
-        @include respond-to("large") {
-          padding: .3em;
-          font-size: 20px;
-          margin: 1.5em 0.5em 1em 0.5em;
-        }
-    
-       }
     }
 
-   
-
     .slide_project {
-      margin: .5em;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: .75em;
       height: 200px;
       width: 250px;
-      
+      margin-bottom: 1em;
 
       @include respond-to("medium") {
         height: 270px;
@@ -566,6 +554,7 @@ ul {
       .pic {
         height: 200px;
         width: 250px;
+        margin-bottom: 1em;
         cursor: pointer;
 
         @include respond-to("medium") {
