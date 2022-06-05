@@ -345,6 +345,10 @@ ul {
 .s2 .skill_container {
   background-color: #6d8b74 !important;
   width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .s2 .skill_title {
   background-color: #6d8b74;
@@ -442,17 +446,14 @@ ul {
   background-size: cover !important;
 }
 .s3 .title-s3 {
+  text-align: center;
   color: #383838;
-}
-@media (max-width: 550px) {
-  .s3 .title-s3 {
-    visibility: hidden;
-    margin: 0;
-  }
+  margin: 1em;
 }
 @media (min-width: 550px) {
   .s3 .title-s3 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin: 0.5em;
   }
 }
 @media (min-width: 767px) {
@@ -463,11 +464,6 @@ ul {
 @media (min-width: 992px) {
   .s3 .title-s3 {
     font-size: 4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .s3 .title-s3 {
-    font-size: 5rem;
   }
 }
 .s3 .arrow-left {
@@ -492,16 +488,24 @@ ul {
   width: 100%;
   margin: 0;
 }
-.s3 .slide {
+.s3 .projects_container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 550px) {
+  .s3 .projects_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 @media (min-width: 767px) {
-  .s3 .slide {
+  .s3 .projects_container {
     flex-direction: row;
   }
 }
-.s3 .slide .project_div {
+.s3 .project_div {
   background-color: rgba(68, 105, 67, 0.5);
   height: 220px;
   width: 270px;
@@ -509,30 +513,16 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1em;
+  margin: 0.5em 1em;
   border-radius: 5px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
-@media (min-width: 767px) {
-  .s3 .slide .project_div {
-    margin: 2em;
-  }
-}
 @media (min-width: 992px) {
-  .s3 .slide .project_div {
-    margin: 2em;
-    height: 420px;
-    width: 380px;
+  .s3 .project_div {
+    margin: 1.5em 2em;
   }
 }
-@media (min-width: 1200px) {
-  .s3 .slide .project_div {
-    margin: 2em;
-    height: 480px;
-    width: 440px;
-  }
-}
-.s3 .slide .project_div .code_btn {
+.s3 .project_div .code_btn {
   visibility: hidden;
   text-align: center;
   margin: 0.5em;
@@ -548,20 +538,20 @@ ul {
   text-decoration: none;
 }
 @media (min-width: 992px) {
-  .s3 .slide .project_div .code_btn {
+  .s3 .project_div .code_btn {
     padding: 0.3em;
     font-size: 18px;
     margin: 1em 0.5em 1.5em 0.5em;
   }
 }
 @media (min-width: 1200px) {
-  .s3 .slide .project_div .code_btn {
+  .s3 .project_div .code_btn {
     padding: 0.3em;
     font-size: 20px;
     margin: 1.5em 0.5em 1em 0.5em;
   }
 }
-.s3 .slide .slide_project {
+.s3 .project_img {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -570,37 +560,12 @@ ul {
   width: 250px;
   margin-bottom: 1em;
 }
-@media (min-width: 992px) {
-  .s3 .slide .slide_project {
-    height: 270px;
-    width: 330px;
-  }
-}
-@media (min-width: 1200px) {
-  .s3 .slide .slide_project {
-    height: 300px;
-    width: 380px;
-  }
-}
-.s3 .slide .slide_project .pic {
+.s3 .project_img .pic {
   height: 200px;
   width: 250px;
   margin-bottom: 1em;
   cursor: pointer;
 }
-@media (min-width: 992px) {
-  .s3 .slide .slide_project .pic {
-    height: 270px;
-    width: 330px;
-  }
-}
-@media (min-width: 1200px) {
-  .s3 .slide .slide_project .pic {
-    height: 300px;
-    width: 380px;
-  }
-}
-
 .s4 {
   display: flex !important;
   justify-content: space-between;

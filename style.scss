@@ -329,6 +329,10 @@ ul {
   .skill_container {
     background-color: #6d8b74 !important;
     width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .skill_title {
@@ -424,14 +428,15 @@ ul {
   background-image: url("./images/temple.jpeg") !important;
   background-size: cover !important;
 
+
   .title-s3 {
+    text-align: center;
     color: #383838;
-    @include respond-to("phone") {
-      visibility: hidden;
-      margin: 0;
-    }
+    margin: 1em; 
+
     @include respond-to("phone-up") {
-      font-size: 2rem;
+      font-size: 3rem;
+      margin: .5em;
     }
     @include respond-to("small") {
       font-size: 3rem;
@@ -440,7 +445,7 @@ ul {
       font-size: 4rem;
     }
     @include respond-to("large") {
-      font-size: 5rem;
+      // font-size: 5rem;
     }
   }
 
@@ -466,13 +471,22 @@ ul {
     margin: 0;
   }
 
-  .slide {
+  .projects_container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include respond-to("phone-up") {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
     @include respond-to("small") {
       flex-direction: row;
+      //flex-wrap: nowrap;
     }
+  }
 
     .project_div {
        background-color: rgba(68, 105, 67, 0.5);
@@ -482,24 +496,23 @@ ul {
        flex-direction: column;
        justify-content: center;
        align-items: center;
-       margin-bottom: 1em;
+       margin: .5em 1em;
        border-radius: 5px;
        box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 
         @include respond-to("small") {
-          margin: 2em;
+          
         }
 
         @include respond-to("medium") {
-          margin: 2em;
-          height: 420px;
-        width: 380px;
+          margin: 1.5em 2em;
+          // height: 290px;
+          // width: 350px;
         }
 
         @include respond-to("large") {
-          margin: 2em;
-          height: 480px;
-        width: 440px;
+          // height: 320px;
+          // width: 400px;
         }
 
     
@@ -532,7 +545,7 @@ ul {
         }
     }
 
-    .slide_project {
+    .project_img {
       display: flex;
       justify-content: center;
       align-content: center;
@@ -542,13 +555,13 @@ ul {
       margin-bottom: 1em;
 
       @include respond-to("medium") {
-        height: 270px;
-        width: 330px;
+        // height: 270px;
+        // width: 330px;
       }
   
       @include respond-to("large") {
-        height: 300px;
-        width: 380px;
+        // height: 300px;
+        // width: 380px;
       }
 
       .pic {
@@ -558,18 +571,17 @@ ul {
         cursor: pointer;
 
         @include respond-to("medium") {
-          height: 270px;
-          width: 330px;
+          // height: 270px;
+          // width: 330px;
         }
 
         @include respond-to("large") {
-          height: 300px;
-          width: 380px;
+          // height: 300px;
+          // width: 380px;
         }
       }
   
     }
-  }
 }
 
 // Section 4
