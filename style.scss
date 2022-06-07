@@ -476,6 +476,7 @@ ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 1200px;
 
     @include respond-to("phone-up") {
       flex-direction: row;
@@ -484,38 +485,23 @@ ul {
 
     @include respond-to("small") {
       flex-direction: row;
-      //flex-wrap: nowrap;
     }
   }
 
     .project_div {
-       background-color: rgba(68, 105, 67, 0.5);
-       height: 220px;
-       width: 270px;
+      height: 200px;
+        width: 250px;
        display: flex;
        flex-direction: column;
        justify-content: center;
        align-items: center;
-       margin: .5em 1em;
+       margin: 1em;
        border-radius: 5px;
        box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 
-        @include respond-to("small") {
-          
-        }
-
         @include respond-to("medium") {
           margin: 1.5em 2em;
-          // height: 290px;
-          // width: 350px;
         }
-
-        @include respond-to("large") {
-          // height: 320px;
-          // width: 400px;
-        }
-
-    
 
        .code_btn {
          visibility: hidden;
@@ -554,33 +540,29 @@ ul {
       width: 250px;
       margin-bottom: 1em;
 
-      @include respond-to("medium") {
-        // height: 270px;
-        // width: 330px;
-      }
-  
-      @include respond-to("large") {
-        // height: 300px;
-        // width: 380px;
-      }
-
       .pic {
         height: 200px;
         width: 250px;
-        margin-bottom: 1em;
         cursor: pointer;
+      }
 
-        @include respond-to("medium") {
-          // height: 270px;
-          // width: 330px;
-        }
-
-        @include respond-to("large") {
-          // height: 300px;
-          // width: 380px;
-        }
+      .pic:hover {
+        
+        transition: 2s;
       }
   
+    }
+
+    //work here ----->
+    .project_detail {
+      visibility: hidden;
+      height: 200px;
+      width: 250px;
+      background-color: rgba(60, 61, 60, 0.7);
+    }
+
+    .project_detail:hover {
+      visibility: visible;
     }
 }
 
@@ -790,6 +772,11 @@ ul {
         padding: 1em;
         text-decoration: none;
         transition-duration: 500ms;
+
+
+        @include respond-to("phone") {
+          padding: .5em;
+        }
       }
   
       a:hover {
@@ -804,6 +791,10 @@ ul {
       text-align: center;
       font-size: .9rem;
       color: #F4F4F2;
+
+      @include respond-to("phone") {
+        margin-top: 0;
+      }
     }
   }
 }

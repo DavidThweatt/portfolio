@@ -493,6 +493,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 1200px;
 }
 @media (min-width: 550px) {
   .s3 .projects_container {
@@ -506,14 +507,13 @@ ul {
   }
 }
 .s3 .project_div {
-  background-color: rgba(68, 105, 67, 0.5);
-  height: 220px;
-  width: 270px;
+  height: 200px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0.5em 1em;
+  margin: 1em;
   border-radius: 5px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
@@ -563,9 +563,21 @@ ul {
 .s3 .project_img .pic {
   height: 200px;
   width: 250px;
-  margin-bottom: 1em;
   cursor: pointer;
 }
+.s3 .project_img .pic:hover {
+  transition: 2s;
+}
+.s3 .project_detail {
+  visibility: hidden;
+  height: 200px;
+  width: 250px;
+  background-color: rgba(60, 61, 60, 0.7);
+}
+.s3 .project_detail:hover {
+  visibility: visible;
+}
+
 .s4 {
   display: flex !important;
   justify-content: space-between;
@@ -765,6 +777,11 @@ ul {
   text-decoration: none;
   transition-duration: 500ms;
 }
+@media (max-width: 550px) {
+  .s4 .footer .about_links a {
+    padding: 0.5em;
+  }
+}
 .s4 .footer .about_links a:hover {
   color: #D0C9C0;
   font-size: 3rem;
@@ -775,4 +792,9 @@ ul {
   text-align: center;
   font-size: 0.9rem;
   color: #F4F4F2;
+}
+@media (max-width: 550px) {
+  .s4 .footer p {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
