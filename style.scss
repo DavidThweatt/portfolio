@@ -407,7 +407,7 @@ ul {
       border-radius: 50px;
       display: inline-block;
       margin: 0;
-      float: left;
+      // float: left;
       transition: all 0.2s ease-out;
     }
   }
@@ -440,6 +440,7 @@ ul {
     }
     @include respond-to("small") {
       font-size: 3rem;
+      margin-bottom: 2em;
     }
     @include respond-to("medium") {
       font-size: 4rem;
@@ -448,6 +449,7 @@ ul {
       // font-size: 5rem;
     }
   }
+
 
   .arrow-left {
     margin-left: 3%;
@@ -490,79 +492,79 @@ ul {
 
     .project_div {
       height: 200px;
-        width: 250px;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       margin: 1em;
-       border-radius: 5px;
-       box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      z-index: 1;
+      position: relative;
 
         @include respond-to("medium") {
           margin: 1.5em 2em;
         }
 
        .code_btn {
-         visibility: hidden;
           text-align: center;
           margin:  .5em;
           padding: .3em;
           width: 4em;
           height: 1.5em;
-          border: none;
-          border-radius: 5px;
-          font-family: "Montserrat", sans-serif;
-          background-color: #D0C9C0;
-          color: #383838;
           cursor: pointer;
-          text-decoration: none;
-
-          @include respond-to("medium") {
-            padding: .3em;
-            font-size: 18px;
-            margin: 1em 0.5em 1.5em 0.5em;
-          }
-          @include respond-to("large") {
-            padding: .3em;
-            font-size: 20px;
-            margin: 1.5em 0.5em 1em 0.5em;
-          }
         }
+    }
+
+    .project_div:hover .project_detail{
+      display: flex;
     }
 
     .project_img {
       display: flex;
       justify-content: center;
       align-content: center;
-      margin: .75em;
       height: 200px;
       width: 250px;
-      margin-bottom: 1em;
+      border-radius: 5px;
 
       .pic {
         height: 200px;
         width: 250px;
-        cursor: pointer;
-      }
-
-      .pic:hover {
-        
-        transition: 2s;
+        border-radius: 5px;
       }
   
     }
 
-    //work here ----->
     .project_detail {
-      visibility: hidden;
+      display: none;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      z-index: 9;
       height: 200px;
       width: 250px;
       background-color: rgba(60, 61, 60, 0.7);
-    }
+      border-radius: 5px;
 
-    .project_detail:hover {
-      visibility: visible;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        color: #E8E8E8;
+      }
+      
+      img {
+        margin: 0;
+        padding: 0;
+      }
     }
 }
 
