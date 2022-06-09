@@ -176,6 +176,11 @@ ul {
     font-size: 2rem;
   }
 }
+.s2 .about_section .about_div h3 .about_span {
+  font-style: italic;
+  text-decoration: underline;
+  background-color: #F4F4F2 !important;
+}
 .s2 .about_section .about_div p {
   padding: 1em 0;
   color: #383838;
@@ -429,6 +434,7 @@ ul {
   border-radius: 50px;
   display: inline-block;
   margin: 0;
+  float: left;
   transition: all 0.2s ease-out;
 }
 

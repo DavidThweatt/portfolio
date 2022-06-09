@@ -162,6 +162,12 @@ ul {
         @include respond-to("large") {
           font-size: 2rem;
         }
+
+        .about_span {
+          font-style: italic;
+          text-decoration: underline;
+          background-color: #F4F4F2 !important;
+        }
       }
 
       p {
@@ -407,7 +413,7 @@ ul {
       border-radius: 50px;
       display: inline-block;
       margin: 0;
-      // float: left;
+      float: left;
       transition: all 0.2s ease-out;
     }
   }
