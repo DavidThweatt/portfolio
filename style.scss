@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   font-family: "Montserrat", sans-serif;
 }
