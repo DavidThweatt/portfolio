@@ -1,0 +1,821 @@
+@import "./variables.scss";
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  background-color: #383838 !important;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  text-align: center !important;
+}
+
+.line {
+  display: block;
+  position: absolute;
+  top: 42%;
+  right: 30.1px;
+  height: 40%;
+  width: 1px;
+  border-right: 2px solid #6D8B74;
+  z-index: 9;
+  border-radius: 10px;
+}
+
+// Section 1
+
+.s1 {
+  background-image: url("../images/monsterra.jpeg");
+  background-size: cover !important;
+
+  .profile_pic {
+    height: auto;
+    width: 15em;
+    border-radius: none;
+  }
+
+  h1 {
+    color: #F4F4F2;
+    font-size: 4rem;
+    font-weight: 800;
+
+    @include respond-to("phone") {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    color: #F4F4F2;
+    font-size: 2rem;
+    font-weight: 400;
+    @include respond-to("phone") {
+      font-size: 1.2rem;
+    }
+  }
+
+  .typewriter_div {
+    width: fit-content;
+  }
+
+  .typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.12em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+}
+
+// Section 2
+
+.s2 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  .about_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+    @include respond-to("large") {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 7em;
+    }
+
+    .about_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2em 2em 1em 2em;
+      max-width: 600px;
+
+      @include respond-to("small") {
+        margin-left: 3em ;
+      }
+
+      @include respond-to("medium") {
+        display: flex;
+        justify-content:flex-start;
+        
+      }
+
+      @include respond-to("large") {
+        margin-right: 3em ;
+      }
+
+      h3 {
+        color: #383838;
+        padding: 0.5em 1em 0.5em 0;
+        margin: 0;
+        font-size: 1.5rem;
+        @include respond-to("large") {
+          font-size: 2rem;
+        }
+
+        .about_span {
+          font-style: italic;
+          text-decoration: underline;
+          background-color: #F4F4F2 !important;
+        }
+      }
+
+      p {
+        padding: 1em 0;
+        color: #383838;
+        padding: 1em 1em 1em 0;
+        margin: 0;
+        line-height: 1.75em;
+        font-size: 0.9rem;
+        @include respond-to("large") {
+          font-size: 1rem;
+        }
+      }
+
+      .wrap {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0;
+
+        .button {
+          display: flex;
+        align-items: center;
+        justify-content: center;
+          min-width: 80px;
+          min-height: 30px;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          color: #E8E8E8;
+          background: #383838;
+          border: none;
+          border-radius: 10px;
+          box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+          transition: all 0.3s ease-in-out 0s;
+          cursor: pointer;
+          outline: none;
+          position: relative;
+          padding: 10px;
+          text-decoration: none;
+        }
+
+        .button::before {
+          content: "";
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 6px solid #6D8B74;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          animation: ring 1.5s infinite;
+        }
+
+        .button:hover::after,
+        .button:focus::after {
+          animation: none;
+          display: none;
+        }
+
+        @keyframes ring {
+          0% {
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+          }
+          100% {
+            width: 120px;
+            height: 120px;
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    .about_pic_container {
+      display: flex;
+       margin: 20px;
+      position: relative;
+      justify-content: center;
+
+      @include respond-to("phone") {
+        visibility: hidden;
+        height: 1px;
+        margin: 0;
+      }
+
+      @include respond-to("small") {
+        justify-content:flex-end;
+        margin-right: 5em;
+      }
+
+      @include respond-to("large") {
+        margin-left: 3em ;
+      }
+    }
+
+    .dots {
+      height: 300px;
+      width: 350px;
+      z-index: 2;
+      background:
+      linear-gradient(90deg, #F4F4F2 (22px - 2px), transparent 1%) center,
+      linear-gradient(#F4F4F2 (22px - 2px), transparent 1%) center,
+      #6D8B74;
+      background-size: 22px 22px;
+
+      @include respond-to("phone") {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+      }
+    }
+    
+
+    .pic_detail {
+      height: 160px;
+      width: 300px;
+      border: 5px solid lightgray;
+      border-radius: 2px;
+      z-index: 1;
+      margin: 4em 1em 1em 2.3em;
+
+      @include respond-to("phone") {
+       border: none;
+      }
+
+      @include respond-to("small") {
+        margin: 4em 1em 1em 2.3em;
+      }
+    }
+
+    .top_stack {
+      z-index: 3;
+      margin: 25px;
+    }
+
+    .about_pic {
+      height: 160px;
+      width: 300px;
+      position: absolute;
+      
+
+      @include respond-to("phone") {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        margin: 0;
+      }
+
+      @include respond-to("small") {
+        
+      }
+
+      img {
+        height: 160px;
+        width: 300px;
+        margin-top: 1.5em;
+        border-radius: 5px;
+        box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      }
+    }
+  }
+
+  .skill_container {
+    background-color: #6d8b74 !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill_title {
+    background-color: #6d8b74;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #383838 !important;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      padding-bottom: .5em;
+      @include respond-to("small") {
+        padding-bottom: 1em;
+      }
+     
+    }
+    h2 {
+      text-decoration: underline #D0C9C0 4px;
+      background-color: #6d8b74;
+      color: #383838;
+      padding-left: .3em;
+      padding-bottom: .5em;
+      @include respond-to("small") {
+        padding-bottom: 1em;
+      }
+    }
+  }
+
+  .skill_div {
+
+    height: 100px;
+    width: 1600px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    bottom: 0;
+  }
+
+  .skill_logos {
+    height: 100px;
+    display: block;
+    width: 200%;
+    margin: 0;
+    position: absolute;
+    animation: scroll 20s linear infinite;
+
+    span {
+      float: left;
+      width: 50%;
+      background-color: #6d8b74!important;
+    }
+
+    @keyframes scroll {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+
+    i {
+      font-size: 5rem;
+      padding-left: 1em;
+      padding-bottom: .3em;
+      color: #383838;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 0;
+      float: left;
+      transition: all 0.2s ease-out;
+    }
+  }
+}
+
+.skill_logos:hover {
+  animation-play-state: paused;
+ 
+}
+
+
+// Section 3
+
+.s3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../images/temple.jpeg") !important;
+  background-size: cover !important;
+
+
+  .title-s3 {
+    text-align: center;
+    color: #383838;
+    margin: 1em; 
+
+    @include respond-to("phone-up") {
+      font-size: 3rem;
+      margin: .5em;
+    }
+    @include respond-to("small") {
+      font-size: 3rem;
+      margin-bottom: 2em;
+    }
+    @include respond-to("medium") {
+      font-size: 4rem;
+    }
+    @include respond-to("large") {
+      // font-size: 5rem;
+    }
+  }
+
+
+  .arrow-left {
+    margin-left: 3%;
+    color: #6D8B74;
+
+    @include respond-to("phone") {
+      visibility: hidden;
+    }
+  }
+
+  .arrow-right {
+    margin-right: 3%;
+    @include respond-to("phone") {
+      visibility: hidden;
+    }
+  }
+
+  .fp-slides {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .projects_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+
+    @include respond-to("phone-up") {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include respond-to("small") {
+      flex-direction: row;
+    }
+  }
+    .project_div {
+      height: 200px;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      z-index: 1;
+      position: relative;
+
+        @include respond-to("medium") {
+          margin: 1.5em 2em;
+        }
+
+    }
+
+    .project_div:hover .project_detail{
+      display: flex;
+    }
+
+    .project_img {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      height: 200px;
+      width: 250px;
+      border-radius: 5px;
+
+      .pic {
+        height: 200px;
+        width: 250px;
+        border-radius: 5px;
+      }
+  
+    }
+
+    .project_detail {
+      display: none;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      z-index: 9;
+      height: 200px;
+      width: 250px;
+      background-color: rgba(60, 61, 60, 0.7);
+      border-radius: 5px;
+
+      .project_info {
+        display: flex;
+        text-align: center;
+        padding: .2em;
+      }
+    
+      .links_container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .icon_div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+        }
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      
+      img {
+        margin: 0;
+        padding: 0;
+      }
+    }
+}
+
+// Section 4
+
+.s4 {
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+
+  h1 {
+    margin-bottom: .2em;
+    @include respond-to("small") {
+      margin-top: 2em;
+    }
+  }
+
+  .phone_email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    @include respond-to("small") {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .phone_icon_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond-to("small") {
+        margin: 0 5em 0 0;
+      }
+
+      figure {
+        display: flex;
+        justify-content: center;
+        height: 1.5em;
+        margin-bottom: .2em;
+        @include respond-to("small") {
+          height: 3em;
+        }
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        font-size: .9rem;
+      }
+    }
+
+    .address_icon_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      figure {
+        display: flex;
+        justify-content: center;
+        height: 1.5em;
+        margin-bottom: .2em;
+
+        @include respond-to("small") {
+          height: 3em;
+        }
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        font-size: .9rem;
+      }
+    }
+
+    .email_icon_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond-to("small") {
+        margin: 0 0 0 5em;
+      }
+
+      figure {
+        display: flex;
+        justify-content: center;
+        height: 1.5em;
+        margin-bottom: .2em;
+
+        @include respond-to("small") {
+          height: 3em;
+        }
+
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        font-size: .9rem;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+   
+
+    .name_email {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      @include respond-to("small") {
+        flex-direction: row;
+      }
+
+      #name{
+        margin: 1em;
+        height: 40px;
+        width: 250px;
+        border: none;
+        border-radius: 5px;
+        box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+        text-indent: 10px;
+        font-family: "Montserrat", sans-serif;
+
+        @include respond-to("small") {
+          height: 50px;
+          width: 300px;
+        }
+      }
+
+      #email {
+        margin: 1em;
+        height: 40px;
+        width: 250px;
+        border: none;
+        border-radius: 5px;
+        box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+        text-indent: 10px;
+        font-family: "Montserrat", sans-serif;
+
+        @include respond-to("small") {
+          height: 50px;
+          width: 300px;
+        }
+      }
+    }
+
+    #message_area {
+      margin: 1em;
+      height: 80px;
+      width: 250px;
+      border: none;
+      border-radius: 5px;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      text-indent: 10px;
+      font-family: "Montserrat", sans-serif;
+
+      @include respond-to("small") {
+        height: 150px;
+        width: 632px;
+      }
+    }
+
+    .button {
+      margin: 1em;
+      height: 35px;
+      width: 100px;
+      border: none;
+      border-radius: 10px;
+      background-color: #6D8B74;
+      color: #F4F4F2;
+      cursor: pointer;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      font-family: "Montserrat", sans-serif;
+
+      @include respond-to("small") {
+        height: 45px;
+      width: 140px;
+      }
+    }
+  }
+
+  .footer {
+    background-color: #5F7161;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .about_links {
+      display: flex;
+      justify-content: center;
+      a {
+        color: #F4F4F2;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 1em;
+        text-decoration: none;
+        transition-duration: 500ms;
+
+
+        @include respond-to("phone") {
+          padding: .5em;
+        }
+      }
+  
+      a:hover {
+        color: #D0C9C0;
+        font-size: 3rem;
+        padding: .5em;
+        transition-duration: 250ms;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: .9rem;
+      color: #F4F4F2;
+
+      @include respond-to("phone") {
+        margin-top: 0;
+      }
+    }
+  }
+}
