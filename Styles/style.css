@@ -48,6 +48,11 @@ ul {
   z-index: 9;
   border-radius: 10px;
 }
+@media (max-width: 550px) {
+  .line {
+    display: none;
+  }
+}
 
 .s1 {
   background-image: url("../images/monsterra.jpeg");
@@ -56,7 +61,8 @@ ul {
 .s1 .profile_pic {
   height: auto;
   width: 15em;
-  border-radius: none;
+  border-radius: 180px;
+  border: 4px solid white;
 }
 .s1 h1 {
   color: #F4F4F2;
@@ -292,6 +298,7 @@ ul {
   .s2 .about_section .about_pic_container {
     justify-content: flex-end;
     margin-right: 5em;
+    margin-top: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -300,8 +307,8 @@ ul {
   }
 }
 .s2 .about_section .dots {
-  height: 300px;
-  width: 350px;
+  height: 230px;
+  width: 320px;
   z-index: 2;
   background: linear-gradient(90deg, #F4F4F2 20px, transparent 1%) center, linear-gradient(#F4F4F2 20px, transparent 1%) center, #6D8B74;
   background-size: 22px 22px;
@@ -313,9 +320,15 @@ ul {
     width: 0px;
   }
 }
+@media (min-width: 767px) {
+  .s2 .about_section .dots {
+    height: 250px;
+    width: 350px;
+  }
+}
 .s2 .about_section .pic_detail {
-  height: 160px;
-  width: 300px;
+  height: 125px;
+  width: 250px;
   border: 5px solid lightgray;
   border-radius: 2px;
   z-index: 1;
@@ -329,6 +342,8 @@ ul {
 @media (min-width: 767px) {
   .s2 .about_section .pic_detail {
     margin: 4em 1em 1em 2.3em;
+    height: 160px;
+    width: 300px;
   }
 }
 .s2 .about_section .top_stack {
@@ -336,8 +351,8 @@ ul {
   margin: 25px;
 }
 .s2 .about_section .about_pic {
-  height: 160px;
-  width: 300px;
+  height: 125px;
+  width: 250px;
   position: absolute;
 }
 @media (max-width: 550px) {
@@ -348,12 +363,24 @@ ul {
     margin: 0;
   }
 }
+@media (min-width: 767px) {
+  .s2 .about_section .about_pic {
+    height: 160px;
+    width: 300px;
+  }
+}
 .s2 .about_section .about_pic img {
-  height: 160px;
-  width: 300px;
+  height: 125px;
+  width: 250px;
   margin-top: 1.5em;
   border-radius: 5px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 767px) {
+  .s2 .about_section .about_pic img {
+    height: 160px;
+    width: 300px;
+  }
 }
 .s2 .skill_container {
   background-color: #6d8b74 !important;
@@ -389,10 +416,12 @@ ul {
   color: #383838;
   padding-left: 0.3em;
   padding-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 @media (min-width: 767px) {
   .s2 .skill_title h2 {
     padding-bottom: 1em;
+    margin: 1em 0;
   }
 }
 .s2 .skill_div {
@@ -607,87 +636,92 @@ ul {
     margin-top: 2em;
   }
 }
-.s4 .phone_email {
+.s4 .phone_location_email {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
 }
 @media (min-width: 767px) {
-  .s4 .phone_email {
+  .s4 .phone_location_email {
     flex-direction: row;
     justify-content: center;
   }
 }
-.s4 .phone_email .phone_icon_div {
+.s4 .phone_location_email .phone_location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.s4 .phone_location_email .phone_icon_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media (min-width: 767px) {
-  .s4 .phone_email .phone_icon_div {
+  .s4 .phone_location_email .phone_icon_div {
     margin: 0 5em 0 0;
   }
 }
-.s4 .phone_email .phone_icon_div figure {
+.s4 .phone_location_email .phone_icon_div figure {
   display: flex;
   justify-content: center;
   height: 1.5em;
   margin-bottom: 0.2em;
 }
 @media (min-width: 767px) {
-  .s4 .phone_email .phone_icon_div figure {
+  .s4 .phone_location_email .phone_icon_div figure {
     height: 3em;
   }
 }
-.s4 .phone_email .phone_icon_div p {
+.s4 .phone_location_email .phone_icon_div p {
   display: flex;
   justify-content: center;
   font-size: 0.9rem;
 }
-.s4 .phone_email .address_icon_div {
+.s4 .phone_location_email .address_icon_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.s4 .phone_email .address_icon_div figure {
+.s4 .phone_location_email .address_icon_div figure {
   display: flex;
   justify-content: center;
   height: 1.5em;
   margin-bottom: 0.2em;
 }
 @media (min-width: 767px) {
-  .s4 .phone_email .address_icon_div figure {
+  .s4 .phone_location_email .address_icon_div figure {
     height: 3em;
   }
 }
-.s4 .phone_email .address_icon_div p {
+.s4 .phone_location_email .address_icon_div p {
   display: flex;
   justify-content: center;
   font-size: 0.9rem;
 }
-.s4 .phone_email .email_icon_div {
+.s4 .phone_location_email .email_icon_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media (min-width: 767px) {
-  .s4 .phone_email .email_icon_div {
+  .s4 .phone_location_email .email_icon_div {
     margin: 0 0 0 5em;
   }
 }
-.s4 .phone_email .email_icon_div figure {
+.s4 .phone_location_email .email_icon_div figure {
   display: flex;
   justify-content: center;
   height: 1.5em;
   margin-bottom: 0.2em;
 }
 @media (min-width: 767px) {
-  .s4 .phone_email .email_icon_div figure {
+  .s4 .phone_location_email .email_icon_div figure {
     height: 3em;
   }
 }
-.s4 .phone_email .email_icon_div p {
+.s4 .phone_location_email .email_icon_div p {
   display: flex;
   justify-content: center;
   font-size: 0.9rem;

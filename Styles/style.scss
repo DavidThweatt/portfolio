@@ -49,6 +49,10 @@ ul {
   border-right: 2px solid #6D8B74;
   z-index: 9;
   border-radius: 10px;
+
+  @include respond-to("phone") {
+    display: none;
+  }
 }
 
 // Section 1
@@ -60,7 +64,8 @@ ul {
   .profile_pic {
     height: auto;
     width: 15em;
-    border-radius: none;
+    border-radius: 180px;
+    border: 4px solid white;
   }
 
   h1 {
@@ -253,7 +258,7 @@ ul {
 
     .about_pic_container {
       display: flex;
-       margin: 20px;
+      margin: 20px;
       position: relative;
       justify-content: center;
 
@@ -266,6 +271,7 @@ ul {
       @include respond-to("small") {
         justify-content:flex-end;
         margin-right: 5em;
+        margin-top: 0;
       }
 
       @include respond-to("large") {
@@ -274,8 +280,8 @@ ul {
     }
 
     .dots {
-      height: 300px;
-      width: 350px;
+      height: 230px;
+      width: 320px;
       z-index: 2;
       background:
       linear-gradient(90deg, #F4F4F2 (22px - 2px), transparent 1%) center,
@@ -288,12 +294,17 @@ ul {
         height: 0px;
         width: 0px;
       }
+      @include respond-to("small") {
+        height: 250px;
+        width: 350px;
+      }
+      
     }
     
 
     .pic_detail {
-      height: 160px;
-      width: 300px;
+      height: 125px;
+      width: 250px;
       border: 5px solid lightgray;
       border-radius: 2px;
       z-index: 1;
@@ -305,6 +316,8 @@ ul {
 
       @include respond-to("small") {
         margin: 4em 1em 1em 2.3em;
+        height: 160px;
+        width: 300px;
       }
     }
 
@@ -314,8 +327,8 @@ ul {
     }
 
     .about_pic {
-      height: 160px;
-      width: 300px;
+      height: 125px;
+      width: 250px;
       position: absolute;
       
 
@@ -327,15 +340,22 @@ ul {
       }
 
       @include respond-to("small") {
-        
-      }
-
-      img {
         height: 160px;
         width: 300px;
+      }
+      
+
+      img {
+        height: 125px;
+        width: 250px;
         margin-top: 1.5em;
         border-radius: 5px;
         box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+
+        @include respond-to("small") {
+          height: 160px;
+          width: 300px;
+        }
       }
     }
   }
@@ -373,8 +393,10 @@ ul {
       color: #383838;
       padding-left: .3em;
       padding-bottom: .5em;
+      margin: .5em 0;
       @include respond-to("small") {
         padding-bottom: 1em;
+        margin: 1em 0;
       }
     }
   }
@@ -602,7 +624,7 @@ ul {
     }
   }
 
-  .phone_email {
+  .phone_location_email {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -611,6 +633,12 @@ ul {
     @include respond-to("small") {
       flex-direction: row;
       justify-content: center;
+    }
+
+    .phone_location {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
 
     .phone_icon_div {

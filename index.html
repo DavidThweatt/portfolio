@@ -44,7 +44,9 @@
       <!-- Section 1 -->
 
       <div class="section s1">
-        <img class="profile_pic" src="./images/face.png" alt="" />
+        <figure>
+          <img class="profile_pic" src="./images/face.png" alt="" />
+        </figure>
         <h1>Hi, I'm David</h1>
         <div class="typewriter_div">
           <p class="typewriter">a frontend developer</p>
@@ -65,9 +67,8 @@
               In 2020 I became curious how software works. The more I learned
               the more interested I became, so after a year of tinkering in my
               free time I decided to quit my job and devote a year to learn as
-              much as I could about frontend development, with the hopes of
-              changing careers to something I'm actually passionate about. My
-              main learning resources for this are
+              much as I could about frontend development. My main learning
+              resources for this are
               <a
                 href="https://www.theodinproject.com/"
                 target="_blank"
@@ -105,12 +106,12 @@
           <div class="about_pic_container">
             <div class="dots">
               <div class="about_pic pic_detail"></div>
-              <div class="about_pic top_stack">
+              <figure class="about_pic top_stack">
                 <img
                   src="./images/about-me-computer.jpeg"
                   alt="laptop on desk"
                 />
-              </div>
+              </figure>
             </div>
           </div>
         </div>
@@ -374,22 +375,30 @@
       <div class="section s4">
         <div class="line"></div>
         <h1>Let's Chat!</h1>
-        <div class="phone_email">
-          <div class="phone_icon_div">
-            <figure>
-              <img src="./images/phone-line.svg" alt="" />
-            </figure>
-            <p>(480) 295 9423</p>
-          </div>
-          <div class="address_icon_div">
-            <figure>
-              <img src="./images/map-pin-line.svg" alt="" />
-            </figure>
-            <p>Phoenix, AZ</p>
+        <div class="phone_location_email">
+          <div class="phone_location">
+            <div class="phone_icon_div">
+              <figure>
+                <a href="tel:4802959423">
+                  <img src="./images/phone-line.svg" alt="" />
+                </a>
+              </figure>
+              <p>(480) 295 9423</p>
+            </div>
+            <div class="address_icon_div">
+              <figure>
+                <a href="">
+                  <img src="./images/map-pin-line.svg" alt="" />
+                </a>
+              </figure>
+              <p>Gilbert, AZ</p>
+            </div>
           </div>
           <div class="email_icon_div">
             <figure>
-              <img src="./images/mail-line.svg" alt="" />
+              <a href="mailto:david.d.thweatt@gmail.com">
+                <img src="./images/mail-line.svg" alt="" />
+              </a>
             </figure>
             <p>david.d.thweatt@gmail.com</p>
           </div>
