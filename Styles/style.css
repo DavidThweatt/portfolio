@@ -156,12 +156,13 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2em 2em 1em 2em;
+  padding: 0.5em 2em 1em 2em;
   max-width: 600px;
 }
 @media (min-width: 767px) {
   .s2 .about_section .about_div {
     margin-left: 3em;
+    padding: 2em 2em 1em 2em;
   }
 }
 @media (min-width: 992px) {
@@ -844,6 +845,6 @@ ul {
 }
 @media (max-width: 550px) {
   .s4 .footer p {
-    margin-top: 0;
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

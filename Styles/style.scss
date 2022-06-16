@@ -146,11 +146,12 @@ ul {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 2em 2em 1em 2em;
+      padding: .5em 2em 1em 2em;
       max-width: 600px;
 
       @include respond-to("small") {
-        margin-left: 3em ;
+        margin-left: 3em;
+        padding: 2em 2em 1em 2em;
       }
 
       @include respond-to("medium") {
@@ -842,7 +843,7 @@ ul {
       color: #F4F4F2;
 
       @include respond-to("phone") {
-        margin-top: 0;
+        display: none;
       }
     }
   }
